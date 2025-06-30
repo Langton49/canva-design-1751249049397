@@ -1,0 +1,28 @@
+.speakers-section {
+  width: 100%;
+  background: var(--color-yellow);
+  padding-top: 48px;
+  padding-bottom: 64px;
+}
+.speakers-title {
+  text-align: center;
+  margin-bottom: 48px;
+}
+.speakers-list {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 32px;
+  flex-wrap: wrap;
+}
+@media (max-width: 900px) {
+  .speakers-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 36px;
+  }
+  .speakers-section {
+    padding-top: 32px;
+    padding-bottom: 40px;
+  }
+}
