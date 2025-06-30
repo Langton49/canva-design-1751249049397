@@ -1,0 +1,117 @@
+/* Global Root Variables for color, font, spacing */
+:root {
+  --color-dark-green: #174C3C;
+  --color-yellow: #FFC72C;
+  --color-white: #FFFFFF;
+  --color-black: #171717;
+  --font-family-main: 'Inter', Arial, Helvetica, sans-serif;
+  --section-padding-large: 64px;
+  --section-padding-med: 48px;
+  --section-padding-small: 24px;
+  --btn-radius: 32px;
+}
+
+body {
+  font-family: var(--font-family-main);
+  background: var(--color-white);
+  color: var(--color-black);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-family-main);
+  color: inherit;
+  margin: 0;
+}
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0;
+}
+
+/* Utility classes for spacing */
+.u-mb-32 { margin-bottom: 32px; }
+.u-mb-24 { margin-bottom: 24px; }
+.u-mb-16 { margin-bottom: 16px; }
+
+/* Responsive Typography */
+.hero-title {
+  font-size: 3.125rem; /* 50px */
+  line-height: 1.18;
+  font-weight: 800;
+  color: var(--color-white);
+}
+@media (max-width: 900px) {
+  .hero-title {
+    font-size: 2.25rem; /* ~36px */
+  }
+}
+.hero-subtitle {
+  font-size: 1.5rem; /* 24px */
+  color: var(--color-white);
+  font-weight: 600;
+  margin-top: 16px;
+}
+.hero-event-details {
+  font-size: 1.125rem; /* 18px */
+  color: var(--color-white);
+  margin-top: 24px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+}
+
+.speakers-title {
+  font-size: 2rem; /* 32px */
+  line-height: 1.2;
+  color: var(--color-dark-green);
+  font-weight: 700;
+}
+
+.contact-title {
+  font-size: 2rem; /* 32px */
+  color: var(--color-white);
+  font-weight: 700;
+}
+
+.contact-details {
+  margin-top: 10px;
+  color: var(--color-white);
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.6;
+  font-weight: 400;
+  word-break: break-all;
+}
+.contact-details:last-of-type {
+  margin-bottom: 0;
+}
+
+/* Main sections wrap */
+.section {
+  width: 100%;
+  box-sizing: border-box;
+}
+/* Responsive Padding: reduce at breakpoints */
+.section-content {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-left: var(--section-padding-large);
+  padding-right: var(--section-padding-large);
+  box-sizing: border-box;
+}
+@media (max-width: 1100px) {
+  .section-content {
+    padding-left: var(--section-padding-med);
+    padding-right: var(--section-padding-med);
+  }
+}
+@media (max-width: 700px) {
+  .section-content {
+    padding-left: var(--section-padding-small);
+    padding-right: var(--section-padding-small);
+  }
+}
